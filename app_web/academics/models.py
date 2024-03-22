@@ -24,6 +24,7 @@ class Person(models.Model):
     updated_at = models.DateTimeField(default=datetime.datetime.now ())
     created_at = models.DateTimeField(default=datetime.datetime.now ())
     deleted_at = models.DateTimeField(null=True, blank=True)
+    id_user=models.ForeignKey(User, on_delete=models.CASCADE, blank = False, null=False, default=1)
     
 class Cities(models.Model):
     name = models.CharField(max_length=100, blank=True)
@@ -50,7 +51,8 @@ class Countries(models.Model):
     deleted_at = models.DateTimeField(null=True, blank=True)
 
 class Students(models.Model):
-    code = models.IntegerField()
+    code = models.CharField(max_length=50)
+    id_person = models.IntegerField()
     status = models.CharField(null=True, blank=True, default = True)
     updated_at = models.DateTimeField(default=datetime.datetime.now ())
     created_at = models.DateTimeField(default=datetime.datetime.now ())
