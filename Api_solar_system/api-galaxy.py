@@ -21,8 +21,7 @@ def get_data():
         print("[6]. Exit")
 
         opt = input("::: Press any option")
-
-
+       
         return data
 
     except requests.exceptions.RequestException as e:
