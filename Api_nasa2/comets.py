@@ -12,5 +12,5 @@ def get_commet_data(api_key):
     except requests.exceptions.RequestException as e:
         print(f"API error: {e}")
 #Main
-api_key_nasa = 'c9hkw2qN7iXHdixPD2OKlTMNTNBe0x1qFGxkABFo'
+api_key_nasa = 'fx0IXZKycwcqJ8eA5LVty0zitW9Fcopo53oAVC7T'
 get_commet_data(api_key_nasa) 
