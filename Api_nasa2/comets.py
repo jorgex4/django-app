@@ -23,7 +23,6 @@ def get_commet_data(api_key):
         print("Diámetro estimado (ft): Min:", diameter_ft_min, "Max:", diameter_ft_max)
         print (f"Orbital data: {data['orbital_data']}")
         
-
     except requests.exceptions.RequestException as e: 
         print(f"Api error {e}") # => print (API Errro) 
 #Main 

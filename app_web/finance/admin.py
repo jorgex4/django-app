@@ -1,12 +1,10 @@
 from django.contrib import admin
-from .models import Cliente, Producto, ClienteProducto, Tipo_transaccion,Transaccion
+
 # Register your models here.
-class ClienteFields(admin.ModelAdmin):
-    list_display = ('nombre','apellido','celular','email')
-    
-class ProductoFields(admin.ModelAdmin):
-    list_display = ('nombre_producto','abreviatura','age','ident_number')
+from .models import Cliente, ClienteProducto, Producto, Transaccion, Tipo_transaccion
 
-admin.site.register(Cliente,ClienteFields)
-admin.site.register(Producto, ProductoFields)
-
+admin.site.register(Cliente)
+admin.site.register(ClienteProducto)
+admin.site.register(Producto)
+admin.site.register(Transaccion)
+admin.site.register(Tipo_transaccion)
