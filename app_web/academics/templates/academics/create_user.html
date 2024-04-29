@@ -10,8 +10,11 @@
         Sign up form
     </h1>
     <form action="" method="post">
-        {{form.as_u}}
-        <button type="submit"> Register></button>
+
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <button type="submit"> Register </button>
     </form>
 </body>
 </html>

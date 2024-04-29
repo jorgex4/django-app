@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import User
 from .forms import Userform
@@ -17,9 +17,10 @@ def create_user(request):
         form = Userform(request.POST)
         if form.is_valid():
             form.save()
-        else:
-            form = Userform()
+            return redirect('list')
+    else:
+        form = Userform()
            # return.redirect('list')
-    return render(request,'academics/create_user.html',{'forms':form}) 
+    return render(request,'academics/create_user.html',{'form':form}) 
     #return HttpResponse(" Creater a new user")
 

@@ -3,8 +3,8 @@ from academics.models import User
 
 class Userform(forms.ModelForm):
     class Meta:
-        Model = User
-        field = [
+        model = User
+        fields = [
             'email',
             'password',
             'status'
